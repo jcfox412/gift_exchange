@@ -111,7 +111,7 @@ class SecretSanta:
         for giver in givers:
             for j in range(len(receivers)):
                 receiver = receivers[j]
-                if receiver not in giver.exclusions and receiver != giver:
+                if receiver.name not in giver.exclusions and receiver != giver:
                     giver.match = receiver
                     receivers.pop(j)
                     break
