@@ -133,8 +133,7 @@ class SecretSanta:
 
     def send_email(self, user):
         FROM = self.email_sender
-        # TO = user.email
-        TO = self.email_sender
+        TO = user.email
 
         msg = self.format_email_message(user, FROM, TO)
 
